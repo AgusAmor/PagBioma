@@ -7,11 +7,12 @@
 
 body{
     background-color: black;
-    color: beige;
+    color: violet;
 }
 
 a{
     color:beige;
+    text-decoration: none;
 }
 
 header{
@@ -23,5 +24,5 @@ footer{
 }
 
 .banner{
-    width: 200px;
+    width: 20%;
 }
