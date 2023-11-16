@@ -1,0 +1,23 @@
+/* GENERAL */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: beige;
+}
+
+a{
+    color:beige
+}
+
+header{
+    top: 0;
+}
+
+footer{
+    bottom: 0;
+}
