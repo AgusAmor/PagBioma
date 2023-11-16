@@ -2,14 +2,12 @@
 include_once("archivos/header.php");
 ?>
     <section>
-        <img src="" alt=""/>
+        <img calss="banner" src="img/banner.jpg" alt="banner"/>
         <h1>Bienvenidos a BIOMA</h1>
         <p>Mercado Natural</p>
-    </section>
-    <section>
-        <button></button>
-        <button>Reservar Bolsón</button>
-        <button>Iniciar sesion</button>
+        <div>
+            <button id="btn_login">Iniciar sesion</button>
+        </div>
     </section>
     <section>
         <img src="" alt=""/>
@@ -21,7 +19,7 @@ include_once("archivos/header.php");
         <button></button>
         <img src="" alt=""/>
     </section>
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 <?php
 include_once("archivos/footer.php");
 ?>
