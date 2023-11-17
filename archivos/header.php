@@ -9,12 +9,14 @@
 </head>
 <body>
     <header>
-        <a href="index.php"><img src="img/logo.png" alt="logo"/></a>
+            <div>
+                <a href="index.php"><img src="img/logo.png" alt="logo"/></a>
+                <a id="carrito" href="carrito.php"><i class="bi bi-cart-fill"></i></a>
+            </div>
         <ul>
             <li><a href="index.php">Inicio</a></li>
             <li><a href="catalogo.php">Catálogo</a></li>
             <li><a href="bolson.php">Bolsón Orgánico</a></li>
             <li><a href="nosotros.php">Nosotros</a></li>
         </ul>
-        <a href="carrito.php"><i class="bi bi-cart-fill"></i></a>
     </header>
