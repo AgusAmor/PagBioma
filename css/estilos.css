@@ -14,6 +14,12 @@ ul{
     list-style: none;
 }
 
+h1{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
 a{
     color: #fdf8df;
     text-decoration: none;
@@ -34,12 +40,11 @@ button{
 
 button:hover{
     background-color:  #719DA5 ;
-    border-radius: 30px;
     color: #fdf8df;
     border-style: solid;
     border-color: #fdf8df;
 }
-
+/*/
 
 /* HEADER */
 header{
@@ -48,6 +53,7 @@ header{
     display: grid;
     padding: 40px 20px;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 header ul{
@@ -55,17 +61,15 @@ header ul{
     gap: 20px;
     width: 100%;
     justify-content: center;
-    margin-top: 20px;
-}
-
-header div{
-    margin: 0%;
+    margin-top: 30px;
 }
 
 #carrito{
     float: right;
     font-size: 2rem;
 }
+/*/
+
 
 /* INDEX */
 .banner {
@@ -73,10 +77,11 @@ header div{
     height: auto;
 }
 
-.seccion{
-    display:flex;
-    margin: 50px 20%;
-    width: 90%;
+#botones{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 .seccion img{
@@ -84,10 +89,130 @@ header div{
     border-radius: 20px;
 }
 
+.seccion{
+    justify-content: center;
+    height: 250PX;
+}
+
+#cat{
+    display: flex;
+    margin: auto;
+}
+
+#cat div{
+    text-align: start;
+    margin: auto 30px;
+    gap: 10px;
+    width: 50%;
+}
+
+#log{
+    display: flex;
+    margin: auto;
+}
+
+#log div{
+    text-align: end;
+    margin: auto 30px;
+    gap: 10px;
+    width: 50%;
+}
+
+/*/
+
+
+/* BOLSON */
+#infoBolson{
+    justify-content: center;
+    display: grid;
+    gap: 30px;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+}
+
+label strong{
+    color:#ffd202;
+}
+
+form{
+    margin: 40px auto;
+    width: 80%;
+}
+
+fieldset{
+    width: 50%;
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    background-color: #719DA5;
+    border-radius: 20px;
+    border: 0;
+}
+
+fieldset legend{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#nombApell{
+    display: flex;
+    gap: 20px;
+}
+
+input{
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fdf8df;
+    border: 0;
+    color: #719DA5;
+}
+
+input:focus{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border-radius: 2px;
+}
+
+#enviarBtn{
+    background-color: #fdf8df;
+    padding: 10px;
+    border-radius: 30px;
+    color: #73a3ad;
+    float: inline-end;
+}
+
+#enviarBtn:hover{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border: 1;
+    border-style: solid;
+    border-color: #fdf8df;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #fdf8df;
+    border: 0;
+    color: #719DA5;
+}
+
+textarea:focus{
+    background-color:  #73a3ad ;
+    color: #fdf8df;
+    border-radius: 2px;
+}
+/*/
 
 /* FOOTER */
 footer{
     bottom: 0;
+    margin-top: 100px;
     background-color: #719DA5;
     display: grid;
     padding: 40px 20px;
@@ -97,6 +222,7 @@ footer{
     padding-bottom: 10px;
 }
 
-footer div{
+footer div a{
     font-size: 1.5rem;
 }
+/*/

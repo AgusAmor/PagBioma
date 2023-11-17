@@ -4,7 +4,7 @@ var btn_signup = document.getElementById('btn_signup');
 var btn_catalogo = document.getElementById('btn_catalogo');
 
 btn_bolson.onclick = function() {
-    window.location.href = '../bolson.php';
+    window.location.href = "../bolson.php";
 }
 
 btn_login.onclick = function() {
