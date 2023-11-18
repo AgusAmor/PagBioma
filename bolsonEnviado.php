@@ -23,6 +23,7 @@ if(isset($_GET['env'])){
     $env =$_GET['env'];
 }
 
+
 if($env == 'envio'){
     echo "
     <form action=enviado.php method=get>
@@ -45,11 +46,10 @@ if($env == 'envio'){
                 <textarea id=acla name=acla placeholder='Si tenés aclaraciones van acá'></textarea>
             </div>
             <div>
-                <input id=enviarBtn type=submit />
+                <input class=enviarBtn type=submit />
             </div>
         </fieldset>
     </form>";
-    header ("Location: enviado.php?nom=$nom&apell=$apell&mail=&cel=$cel&bolsa=$bolsa&pago=$pago&env=$env");
 }else{
     header ("Location: enviado.php?nom=$nom&apell=$apell&mail=&cel=$cel&bolsa=$bolsa&pago=$pago&env=$env");
 }

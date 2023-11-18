@@ -85,7 +85,7 @@ include_once("archivos/header.php");
                     </div>
                 </div>
                 <div>
-                    <input id="enviarBtn" type="submit"/>
+                    <input class="enviarBtn" type="submit"/>
                 </div>
             </fieldset>
         </form>

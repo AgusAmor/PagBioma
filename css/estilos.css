@@ -117,6 +117,26 @@ header ul{
     gap: 10px;
     width: 50%;
 }
+/*/
+
+/* CATALOGO */
+.catalogo{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.second{
+    display: flex;
+    gap: 20px;
+}
+
+.catalogo img{
+    width: 250px;
+    border-radius: 20px;
+}
 
 /*/
 
@@ -176,7 +196,7 @@ input:focus{
     border-radius: 2px;
 }
 
-#enviarBtn{
+.enviarBtn{
     background-color: #fdf8df;
     padding: 10px;
     border-radius: 30px;
@@ -184,7 +204,7 @@ input:focus{
     float: inline-end;
 }
 
-#enviarBtn:hover{
+.enviarBtn:hover{
     background-color:  #73a3ad ;
     color: #fdf8df;
     border: 1;
