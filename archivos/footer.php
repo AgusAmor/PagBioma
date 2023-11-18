@@ -1,3 +1,4 @@
+    <script src="js/main.js"></script>
 </body>
 <footer>
     <p>Mercado Natural, verduleria y almacén de productos orgánicos y agroecológicos.</p>

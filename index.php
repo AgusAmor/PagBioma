@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION;
 include_once("archivos/header.php");
 ?>
     <section>
@@ -26,8 +28,7 @@ include_once("archivos/header.php");
             <button id="btn_signup">Registrarse</button>
         </div>
         <img src="img/catalogo/001.jpeg" alt="registrarse"/>
-    </section>
-    <script src="js/script.js"></script>
+</section>
 <?php
 include_once("archivos/footer.php");
 ?>

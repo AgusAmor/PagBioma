@@ -90,7 +90,6 @@ include_once("archivos/header.php");
             </fieldset>
         </form>
     </section>
-    <script src="js/script.js"></script>
 <?php
 include_once("archivos/footer.php");
 ?>

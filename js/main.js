@@ -4,17 +4,17 @@ var btn_signup = document.getElementById('btn_signup');
 var btn_catalogo = document.getElementById('btn_catalogo');
 
 btn_bolson.onclick = function() {
-    window.location.href = "../bolson.php";
+    window.location.href = "bolson.php";
 }
 
 btn_login.onclick = function() {
-    window.location.href = '../login.php';
+    window.location.href = 'registros/login.php';
 }
 
 btn_signup.onclick = function() {
-    window.location.href = '../signup.php';
+    window.location.href = 'registros/signup.php';
 }
 
 btn_catalogo.onclick = function() {
-    window.location.href = '../catalogo.php';
+    window.location.href = 'catalogo.php';
 }

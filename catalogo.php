@@ -19,7 +19,6 @@ require_once("connect/connect.php");
                             <h3>$fila[tipo]</h3>
                         </div>";
                         $contador++;
-
                         if ($contador == 5){
                             echo "</div>";
                             echo "<div class='second'>";
@@ -30,7 +29,6 @@ require_once("connect/connect.php");
                 ?>
             </div>
     </section>
-    <script src="js/script.js"></script>
 <?php
 include_once("archivos/footer.php");
 ?>

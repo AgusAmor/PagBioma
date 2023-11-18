@@ -54,6 +54,5 @@ if($env == 'envio'){
     header ("Location: enviado.php?nom=$nom&apell=$apell&mail=&cel=$cel&bolsa=$bolsa&pago=$pago&env=$env");
 }
 
-
 include_once("archivos/footer.php");
 ?>
