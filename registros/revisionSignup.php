@@ -8,10 +8,10 @@
         $email = $_POST['user'];
         $contra = $_POST['pass'];
     
-        $consulta ="INSERT INTO usuario (nombre, apellido, email, contra) 
-        VALUE ('$nom', '$apell', '$email', MD5('$contra'))";
+        $consulta = "INSERT INTO usuario SET nombre = '$nom', apellido = '$apell', 
+        email = '$email', contra = MD5('$contra'), acceso = 'usuario', estado = 'activo'";
         
         mysqli_query($con, $consulta);
-        header ("Location: ../index.php?alta=ok");
+        header ("Location: login.php?alta=ok");
     }
 ?>

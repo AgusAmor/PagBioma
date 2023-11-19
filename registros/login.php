@@ -20,6 +20,9 @@ require_once("../connect/connect.php");
                         <p>El usuario o contraseña ingresados no son correctos.</p>
                         <button id=btn_signup>Registrarse</button>";
                     }
+                    if(isset($_GET['alta'])){
+                        echo "<p>Ya podés iniciar sesión.</p>";
+                    }
                 ?>
             </div>
             <input type="submit" value="Iniciar sesión"/>

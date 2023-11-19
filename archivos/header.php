@@ -14,8 +14,11 @@
 <body>
     <header>
             <div>
-                <a href="index.php"><img src="<?php echo $ruta;?>/img/logo.png" alt="logo"/></a>
-                <a id="carrito" href="carrito.php"><i class="bi bi-cart-fill"></i></a>
+                <a href="<?php echo $ruta;?>/index.php"><img src="<?php echo $ruta;?>/img/logo.png" alt="logo"/></a>
+                <div id="carrito">
+                    <a href="<?php echo $ruta;?>/registros/login.php">Iniciar sesión</a>
+                    <a href="<?php echo $ruta;?>/registros/signup.php">Registrarse</a>
+                </div>
             </div>
         <ul>
             <li><a href="<?php echo $ruta;?>/index.php">Inicio</a></li>
