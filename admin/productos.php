@@ -6,7 +6,6 @@ include_once("../archivos/headerAdmin.php");
 
 $consulta = "SELECT * FROM producto";
 $resultado = mysqli_query($con, $consulta);
-
 ?>
     <section>
         <h1>Productos</h1>
@@ -32,6 +31,7 @@ $resultado = mysqli_query($con, $consulta);
                             <td>$fila[categoria_id]</td>
                             <td><a href=modificarProducto.php?id=$fila[id]>Editar</a></td>
                             <td><a href=eliminarProducto.php?id=$fila[id]>Eliminar</a></td>
+                        </tr>
                     ";
 
                 }
@@ -66,17 +66,17 @@ $resultado = mysqli_query($con, $consulta);
                 <div id="select">
                     <label for="cate">Categoría <strong>*</strong></label>
                     <select name="cate" id="cate">
-                        <option value="1">Fruta</option>
-                        <option value="2">Verdura</option>
-                        <option value="3">Bolsón</option>
-                        <option value="4">Almacén</option>
+                        <?php
+                            $consulta = "SELECT * FROM categoria";
+                            $resultado = mysqli_query($con, $consulta);
+                            while ($fila = mysqli_fetch_array($resultado)){
+                                echo "<option value=$fila[id] >$fila[nombre]</option>";
+                            }
+                        ?>
                     </select>
                 </div>
                 <input class="enviarBtn" type="submit" value="Agregar producto"/>
             </fieldset>
-
-
-
         </form>
     </section>
 <?php

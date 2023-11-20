@@ -14,7 +14,7 @@ require_once("connect/connect.php");
                     while($fila = mysqli_fetch_array($resultado)){
                         echo "
                         <div>
-                            <img src=$fila[imagen] alt=$fila[nombre]/>
+                            <img src=img/catalogo/$fila[imagen] alt=$fila[nombre]/>
                             <h2>$fila[nombre]</h2>
                             <h3>$fila[tipo]</h3>
                         </div>";

@@ -47,7 +47,7 @@ if($con){
                             </select>
                             ";
                         break;
-                        }
+                    }
                 echo "
                 </div>
                 <div>
@@ -59,54 +59,23 @@ if($con){
                     <input type=file id=pic name=pic value=$fila[imagen] />
                     <div>
                         <p>Imagen actual</p>
-                        <img src=../img/catalogo/$fila[imagen] />
+                        <a href=../img/catalogo/$fila[imagen] target=blank ><img src=../img/catalogo/$fila[imagen] /></a>
                     </div>
                 </div>
                 <div>
-                    <label for=cate >Categoría</label>";
-                    switch($fila['categoria_id']){
-                        case 1:
-                            echo "
-                            <select name=cate id=cate>
-                                <option value=1 selected>Fruta</option>
-                                <option value=2>Verdura</option>
-                                <option value=3>Bolsón</option>
-                                <option value=4>Almacén</option>
-                            </select>
-                            ";
-                        break;
-                        case 2:
-                            echo "
-                            <select name=cate id=cate>
-                                <option value=1>Fruta</option>
-                                <option value=2 selected>Verdura</option>
-                                <option value=3>Bolsón</option>
-                                <option value=4>Almacén</option>
-                            </select>
-                            ";
-                        break;
-                        case 3:
-                            echo "
-                            <select name=cate id=cate>
-                                <option value=1>Fruta</option>
-                                <option value=2>Verdura</option>
-                                <option value=3 selected>Bolsón</option>
-                                <option value=4>Almacén</option>
-                            </select>
-                            ";
-                        break;
-                        case 4:
-                            echo "
-                            <select name=cate id=cate>
-                                <option value=1>Fruta</option>
-                                <option value=2>Verdura</option>
-                                <option value=3>Bolsón</option>
-                                <option value=4 selected>Almacén</option>
-                            </select>
-                            ";
-                        break;
-                    }
+                    <label for=cate >Categoría</label>
+                    <select name=cate id=cate>";
+                            $consulta = "SELECT * FROM categoria";
+                            $resultado = mysqli_query($con, $consulta);
+                            while ($filab = mysqli_fetch_array($resultado)){
+                                if ($filab['id'] == $fila['categoria_id']){
+                                    echo "<option value=$filab[id] selected>$filab[nombre]</option>";
+                                }else{
+                                    echo "<option value=$filab[id]>$filab[nombre]</option>";
+                                }
+                            }
                     echo"
+                    </select>
                 </div>
                 <input class=enviarBtn type=submit />
                 <a href=productos.php class=enviarBtn>Volver</a>
