@@ -252,6 +252,7 @@ footer div a{
 
 
 /* ADMIN */
+/* general */
 #admin{
     background-color: #fdf8df;
     color: #719DA5;
@@ -273,15 +274,20 @@ footer div a{
     color: #fdf8df;
 }
 
+/* tabla */
 #admin table{
     border-radius: 10px;
     padding: 8px;
-    background-color: #ffd202;
+    background-color: #fdf8df;
     border: 1;
     border-style: solid;
     border-color: #73a3ad;
     text-align: center;
     margin: 10px auto;
+}
+
+#admin table a:hover{
+    color: #ffd202;
 }
 
 #admin table td{
@@ -294,5 +300,71 @@ footer div a{
     border: 1;
     border-style: solid;
     border-color: #73a3ad;
+}
+
+#admin table img{
+    width: 30px;
+    height: auto;
+}
+
+/* form */
+#admin fieldset{
+    background-color: #fdf8df;
+    border: #719DA5;
+    border-style: solid;
+}
+
+#admin div div{
+    display: flex;
+    gap: 30px;
+}
+
+#admin input{
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #719DA5;
+    border: 0;
+    color: #fdf8df;
+}
+
+#admin input:focus{
+    background-color: #719DA5;
+    color: #ffd202;
+    border-radius: 2px;
+}
+
+input#pic{
+    background-color: #fdf8df;
+    color: #719DA5;
+}
+
+#select{
+    display: flex;
+}
+
+select{
+    background-color: #719DA5;
+    color: #fdf8df;
+    border: 0;
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+#admin .enviarBtn{
+    margin: auto;
+    padding: 8px;
+}
+
+#admin .enviarBtn:hover{
+    color: #ffd202;
+    background-color: #fdf8df;
+    border: #719DA5;
+    border-style: solid;
+}
+/* modProd */
+#imgProducto img{
+    width: 30px;
+    border-radius: 20px;
 }
 /*/
