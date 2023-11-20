@@ -1,4 +1,5 @@
 <?php
+require_once("../archivos/revisionAdmin.php");
 require_once("../connect/connect.php");
 
 $id = $_GET['id'];

@@ -1,4 +1,5 @@
 <?php
+require_once("../archivos/revisionAdmin.php");
 require_once("../connect/connect.php");
 if($con){
     if (isset($_POST['nom']) and isset($_POST['tipo']) 
@@ -12,8 +13,9 @@ if($con){
     }
     
     if (!empty($_FILES['pic']['name'])) {
-        move_uploaded_file($_FILES ['pic']['tmp_name'], "../img/catalogo/$nom" . ".jpeg");
-        $imagen = $nom . ".jpeg";
+        $hora = time();
+        move_uploaded_file($_FILES ['pic']['tmp_name'], "../img/catalogo/$hora" . ".jpeg");
+        $imagen = $hora . ".jpeg";
         
         $consulta = "UPDATE producto SET nombre = '$nom', tipo = '$tipo', precio = '$precio' , imagen = '$imagen', categoria_id = '$cate' WHERE id = '$id'";
         $resultado = mysqli_query($con, $consulta);

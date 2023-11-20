@@ -1,4 +1,5 @@
 <?php
+require_once("../archivos/revisionAdmin.php");
 require_once("../connect/connect.php");
 if($con){
     if (isset($con)){
@@ -7,8 +8,9 @@ if($con){
         $precio = $_POST['precio'];
         $cate = $_POST['cate'];
         
-        move_uploaded_file($_FILES ['pic']['tmp_name'], "../img/catalogo/$nom" . ".jpeg");
-        $imagen = $nom . ".jpeg";
+        $hora = $hora = time();
+        move_uploaded_file($_FILES ['pic']['tmp_name'], "../img/catalogo/$hora" . ".jpeg");
+        $imagen = $hora . ".jpeg";
     }
 
     $consulta = "INSERT INTO producto (nombre, tipo, precio, imagen, categoria_id) 

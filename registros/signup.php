@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION;
+$title = "BIOMA - Registrarse";
 include_once("../archivos/header.php");
 require_once("../connect/connect.php");
 ?>

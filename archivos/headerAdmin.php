@@ -1,6 +1,4 @@
 <?php
-    $ruta = '/Parcial2_AmorAgustin';
-
     $usuario = $_SESSION['email'];
 ?>
 
@@ -15,10 +13,22 @@
 </head>
 <body id="admin">
     <header>
+            <div id="login">
+                <p><?php echo "$usuario" ?></p>
+                <a href="../index.php">Ver sitio</a>
+                <a href="../registros/logout.php">Cerrar sesión</a>
+            </div>
             <a href="index.php"><img src="<?php echo $ruta;?>/img/logoInverso.png" alt="logo"/></a>
-        <ul>
-            <li><a href="<?php echo $ruta;?>/admin/usuarios.php">Usuarios</a></li>
-            <li><a href="<?php echo $ruta;?>/admin/productos.php">Productos</a></li>
-            <li><a href="<?php echo $ruta;?>/admin/categorias.php">Categorias</a></li>
-        </ul>
+            <nav>
+            <?php
+                $nav = array();
+                $nav ['Usuarios'] = 'usuarios.php';
+                $nav ['Productos'] = 'productos.php';
+                $nav ['Categorías'] = 'categorias.php';
+
+                foreach($nav as $section => $direccion){
+                    echo "<li><a href=$direccion>$section</a></li>";
+                }
+                ?>
+        </nav>
     </header>

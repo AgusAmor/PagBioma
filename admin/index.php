@@ -1,6 +1,5 @@
 <?php
-session_start();
-$_SESSION;
+require_once("../archivos/revisionAdmin.php");
 require_once("../connect/connect.php");
 include_once("../archivos/headerAdmin.php");
 ?>

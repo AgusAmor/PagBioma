@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION;
+$title = "BIOMA - Iniciar Sesión";
 include_once("../archivos/header.php");
 require_once("../connect/connect.php");
 ?>
@@ -17,15 +18,25 @@ require_once("../connect/connect.php");
                 <?php
                     if(isset($_GET['error'])){
                         echo "
-                        <p>El usuario o contraseña ingresados no son correctos.</p>
-                        <button id=btn_signup>Registrarse</button>";
+                        <div id=problema>
+                            <p>El usuario o contraseña ingresados no son correctos.</p>
+                            <a href=signup.php class=btn>Registrarse</a>
+                        </div>
+                        ";
+                    }
+                    if(isset($_GET['ban'])){
+                        echo "
+                        <div id=problema>
+                            <p>El usuario con el que intenta ingresar esta banneado, comuniquese con un administrador.</p>
+                        </div>
+                        ";
                     }
                     if(isset($_GET['alta'])){
                         echo "<p>Ya podés iniciar sesión.</p>";
                     }
                 ?>
             </div>
-            <input type="submit" value="Iniciar sesión"/>
+            <input class="btn" type="submit" value="Iniciar sesión"/>
         </fieldset>
     </form>
 <?php

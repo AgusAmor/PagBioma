@@ -1,4 +1,7 @@
 <?php
+session_start();
+$_SESSION;
+$title = "BIOMA - Bolsón";
 include_once("archivos/header.php");
 ?>
     <section>
@@ -27,7 +30,7 @@ include_once("archivos/header.php");
                 <p>Para mantener este ciclo activo es importante que cuides tu bolsa, y asi se la podamos entregar a otro cliente en óptimas condiciones. Así cuidamos el planeta y nos ayudamos entre todos</p>
             </div>
         </div>
-        <form action="bolsonEnviado.php" method="get">
+        <form action="bolsonEnvios.php" method="get">
             <fieldset>
                 <legend>Reservar Bolsón</legend>
                 <div id="nombApell">

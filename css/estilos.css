@@ -10,7 +10,7 @@ body{
     color: #fdf8df;
 }
 
-ul{
+ul, nav{
     list-style: none;
 }
 
@@ -57,7 +57,7 @@ header{
     padding-bottom: 10px;
 }
 
-header ul{
+header nav{
     display: flex;
     gap: 20px;
     width: 100%;
@@ -65,10 +65,37 @@ header ul{
     margin-top: 30px;
 }
 
-#carrito{
-    float: right;
+#login{
     display: grid;
     font-size: 1rem;
+    justify-content: center;
+    position: absolute;
+    padding: 10px;
+}
+/*/
+
+
+/* LOGIN */
+.btn{
+    background-color: #fdf8df;
+    padding: 5px;
+    border-radius: 30px;
+    color: #719DA5;
+}
+
+.btn:hover{
+    background-color:  #719DA5 ;
+    color: #fdf8df;
+}
+
+#problema{
+    display: grid;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+#problema .btn{
+    margin: auto;
 }
 /*/
 
@@ -232,6 +259,13 @@ textarea:focus{
 }
 /*/
 
+
+/* NOSOTROS */
+#nosotros{
+    text-align: center;
+    margin-top: 20px;
+}
+/*/
 
 /* FOOTER */
 footer{

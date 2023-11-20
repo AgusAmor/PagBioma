@@ -1,7 +1,7 @@
-    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 <footer>
-    <p>Mercado Natural, verduleria y almacén de productos orgánicos y agroecológicos.</p>
+    <p>Mercado Natural, verdulería y almacén de productos orgánicos y agroecológicos.</p>
         <div>
             <a href="https://api.whatsapp.com/send/?phone=5491130188009&text&type=phone_number&app_absent=0" target="blank"><i class="bi bi-whatsapp"></i></a>
             <a href="https://www.instagram.com/bioma.mercadoorganico/?hl=es-la" target="blank"><i class="bi bi-instagram"></i></a>

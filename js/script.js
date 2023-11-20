@@ -16,5 +16,5 @@ btn_signup.onclick = function() {
 }
 
 btn_catalogo.onclick = function() {
-    
+    window.location.href = 'catalogo.php';
 }
