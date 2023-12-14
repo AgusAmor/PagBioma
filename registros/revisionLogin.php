@@ -9,15 +9,10 @@
         $contra = $_POST['pass'];
     }
     
-    $consulta ="SELECT email, contra, acceso FROM usuario WHERE email = '$email'";
-    $resultado = mysqli_query($con, $consulta);
-    $fila = mysqli_fetch_array($resultado);
+    $consulta = "SELECT * FROM usuario WHERE email = '$email' AND contra = MD5('$contra')";
 
-    if($fila['contra'] != $contra){
-        header ("Location: login.php?error=error");
-    }elseif($fila == NULL){
-        header("Location: login.php?error=error");
-    }
+    $resultado = mysqli_query($con, $consulta);
+    $fila = mysqli_fetch_assoc($resultado);
 
     if ($fila['acceso'] == 'admin'){
         if ($fila['estado'] == 'banneado'){
@@ -26,15 +21,17 @@
             $_SESSION = $fila;
             header("Location: ../admin/index.php");
         }
-    }
-
-    if ($fila['acceso'] == 'usuario'){
+    }else{
         if ($fila['estado'] == 'banneado'){
             header("Location: login.php?ban=ban");
         }else{
             $_SESSION = $fila;
             header("Location: ../index.php");
         }
+    }
+
+    if($fila == NULL){
+        header("Location: login.php?error=error");
     }
 
 ?>

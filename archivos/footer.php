@@ -1,4 +1,7 @@
-    <script src="js/script.js"></script>
+<?php
+    $ruta = '/Final_AmorAgustin';
+?>
+    <script src="<?php echo $ruta;?>/js/script.js"></script>
 </body>
 <footer>
     <p>Mercado Natural, verdulería y almacén de productos orgánicos y agroecológicos.</p>

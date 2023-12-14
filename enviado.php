@@ -3,8 +3,7 @@ $title = "BIOMA - Enviado con Éxito";
 include_once("archivos/header.php");
 require_once("connect/connect.php");
     if (isset($_GET['nom']) && isset($_GET['apell']) && isset($_GET['mail']) 
-        && isset($_GET['cel']) && isset($_GET['bolsa']) && isset($_GET['pago']) && isset($_GET['env']) 
-        && isset($_GET['domicilio']) && isset($_GET['timbre']) && isset($_GET['local']) && isset($_GET['acla'])){
+        && isset($_GET['cel']) && isset($_GET['bolsa']) && isset($_GET['pago']) && isset($_GET['env'])){
 
         $nom = $_GET['nom'];
         $apell = $_GET['apell'];
@@ -13,36 +12,57 @@ require_once("connect/connect.php");
         $bolsa = $_GET['bolsa'];
         $pago = $_GET['pago'];
         $env = $_GET['env'];
-        $domicilio = $_GET['domicilio'];
-        $timbre = $_GET['timbre'];
-        $local = $_GET['local'];
-        $acla = $_GET['acla'];
+        
+        if (isset($_GET['acla'])){
+            $acla = $_GET['acla'];
+        }else{
+            $acla = "";
+        }
 
         $destino = "biomaurquiza@gmail.com";
         $asunto = "Pedido de bolson";
         if($env == 'envio'){
+            if(isset($_GET['domicilio']) && isset($_GET['timbre']) && isset($_GET['local'])){
+                $domicilio = $_GET['domicilio'] . " | " . $_GET['timbre'] . " | " . $_GET['local'];
+
+                $consulta = "UPDATE usuario SET direccion = '$domicilio' WHERE email = '$mail'";
+                $resultado = mysqli_query($con, $consulta);
+
+            }
             $cuerpo = "
-                    <p>Pedido de bolsón de $nom $apell: </p>
-                    <p>Telefono: $cel </p>
-                    <p>Tene bolsa?: $bolsa </p>
-                    <p>Como paga?: $pago </p>
-                    <p>Envios: $env </p>
-                    <p>Direccion: $domicilio | $timbre | $local </p>
-                    <p>Aclaraciones: $acla </p>
-                ";
-        }else{
-            $cuerpo = "
+                    <div class=mail>
+                        <h2>Mensaje enviado</h2>
                         <p>Pedido de bolsón de $nom $apell: </p>
                         <p>Telefono: $cel </p>
                         <p>Tene bolsa?: $bolsa </p>
                         <p>Como paga?: $pago </p>
                         <p>Envios: $env </p>
+                        <p>Direccion: $domicilio</p>
                         <p>Aclaraciones: $acla </p>
-                    ";
+                    </div>
+                    ";           
+        }else{
+            $cuerpo = "
+                        <div class=mail>
+                            <h2>Mensaje enviado</h2>
+                            <p>Pedido de bolsón de $nom $apell: </p>
+                            <p>Telefono: $cel </p>
+                            <p>Tene bolsa?: $bolsa </p>
+                            <p>Como paga?: $pago </p>
+                            <p>Envios: $env </p>
+                            <p>Aclaraciones: $acla </p>
+                        </div>
+                        ";
         }
         $remitente = "From: agustinwamor@gmail.com";
 
         echo "$cuerpo";
+        echo "
+            <div class=cardGracias>
+            <h2>¡Gracias por tu pedido!</h2>
+            <p>En caso de teer alguna consulta acerca del bolsón no dudes en escribirnos.</p>
+            </div>
+        ";
         
 
         // if (mail($destino, $asunto, $cuerpo, $remitente)) {

@@ -257,6 +257,30 @@ textarea:focus{
     color: #fdf8df;
     border-radius: 2px;
 }
+
+.mail{
+    margin: 20px auto;
+    display: grid;
+    justify-content: center;
+}
+
+.mail h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.cardGracias{
+    text-align: center;
+    padding: 30px;
+    display: grid;
+    gap: 20px;
+    width: 50%;
+    margin: auto;
+    background-color: #fdf8df;
+    color: #73a3ad ;
+    border-radius: 20px;
+    border: 0;
+}
 /*/
 
 

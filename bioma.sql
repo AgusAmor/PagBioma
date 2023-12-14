@@ -3,11 +3,11 @@ create table usuario(
 	id int not null auto_increment,
     nombre varchar(20) not null,
     apellido varchar(20) not null,
-    direccion varchar(20),
+    direccion varchar(255),
     email varchar(50) not null,
-    contra varchar(8) not null,
+    contra varchar(40) not null,
     acceso varchar(7) not null,
-    estado varchar(7) not null,
+    estado varchar(10) not null,
     primary key (id)
 );
 
@@ -45,5 +45,5 @@ values
     
 insert into usuario (nombre, apellido, email, contra, acceso, estado)
 values
-	('Agustin', 'Amor', 'awa@gmail', '123qwe', 'admin', 'activo');
+	('Agustin', 'Amor', 'awa@gmail', MD5('123qwe'), 'admin', 'activo');
 
